@@ -1,0 +1,51 @@
+version: '2.1'
+
+services:
+  redis:
+    image: "redis"
+    hostname: infra-redis
+    healthcheck: 
+      test: redis-cli info || exit 1
+      interval: 30s
+      timeout: 1s
+      retries: 5
+    ports:
+      - "6379:6379"
+  
+  eventstore:
+    image: "eventstore/eventstore"
+    environment: 
+      - EVENTSTORE_START_STANDARD_PROJECTIONS=true
+    hostname: infra-eventstore
+    healthcheck: 
+      test: curl -f http://localhost:2113/ || exit 1
+      interval: 15s
+      timeout: 3s
+      retries: 5
+    ports:
+      - "1113:1113"
+      - "2113:2113"
+  
+  elasticsearch:
+    image: "elasticsearch:7.2.0"
+    hostname: infra-elasticsearch
+    healthcheck: 
+      test: curl -f http://localhost:9200/ || exit 1
+      interval: 30s
+      timeout: 3s
+      retries: 5
+    ports:
+      - "9200:9200"
+
+  seq:
+    image: "datalust/seq"
+    hostname: infra-seq
+    environment: 
+      - ACCEPT_EULA=Y
+    healthcheck: 
+      test: curl -f http://localhost:80/ || exit 1
+      interval: 30s
+      timeout: 3s
+      retries: 5
+    ports:
+      - "5341:80"

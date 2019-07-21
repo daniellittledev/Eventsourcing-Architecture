@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CQRSArchitecture", "CQRSArchitecture\CQRSArchitecture.fsproj", "{06292899-9273-478D-AD0E-F2F50C0EA3DF}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Database.Up", "Database.Up\Database.Up.fsproj", "{AA7CAA8D-A250-424F-8E38-B7D570569763}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06292899-9273-478D-AD0E-F2F50C0EA3DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06292899-9273-478D-AD0E-F2F50C0EA3DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06292899-9273-478D-AD0E-F2F50C0EA3DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06292899-9273-478D-AD0E-F2F50C0EA3DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7CAA8D-A250-424F-8E38-B7D570569763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7CAA8D-A250-424F-8E38-B7D570569763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7CAA8D-A250-424F-8E38-B7D570569763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7CAA8D-A250-424F-8E38-B7D570569763}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
